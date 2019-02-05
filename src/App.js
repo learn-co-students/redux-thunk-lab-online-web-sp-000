@@ -16,7 +16,14 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        ,
+      <Navbar>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a href="#">CatBook</a>
+            <CatList catPics={this.props.catPics} />
+          </Navbar.Brand>
+        </Navbar.Header>
+      </Navbar>
         <CatList catPics={this.props.catPics} />
       </div>
     );
