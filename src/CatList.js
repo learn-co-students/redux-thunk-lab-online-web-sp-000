@@ -5,7 +5,7 @@ export default class CatList extends Component {
     return (
       <div>
         {this.props.catPics.map((pic, index) => (
-          <img key={index} src={pic} />
+          <img key={index} src={pic} alt="cats"/>
         ))}
       </div>
     );
