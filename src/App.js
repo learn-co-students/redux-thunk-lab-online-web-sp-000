@@ -27,8 +27,8 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    loading: state.loading,
-    catPics: state.pictures
+    loading: state.cats.loading,
+    catPics: state.cats.pictures
   };
 };
 
