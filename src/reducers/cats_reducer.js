@@ -6,7 +6,7 @@ export default function catsReducer(state = {
     case 'LOADING_CATS':
       return { ...state, loading: true}
     case 'FETCH_CATS':
-      debugger;
+      console.log('Fetching Cats')
       return {...state, loading: false, pictures:action.payload}
     default:
       return state;
