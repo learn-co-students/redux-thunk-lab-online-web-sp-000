@@ -1,7 +1,8 @@
 import React from 'react'
 
 const CatList = props => {
-  return "balls"
+  debugger;
+  return "I quit"
 }
 
 export default CatList
