@@ -1,12 +1,12 @@
-export default function manageCat(state = {
+export default function catsReducer(state = {
   loading: false,
   pictures: [],
 }, action) {
   switch (action.type) {
     case 'LOADING_CATS':
-      return "Balls"
+      return action.cats
     case 'FETCH_CATS':
-      return "Balls"
+      return action.cats
     default:
       return state;
   }
