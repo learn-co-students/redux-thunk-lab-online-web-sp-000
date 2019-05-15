@@ -3,7 +3,9 @@ export default function manageCat(state = {
   pictures: [],
 }, action) {
   switch (action.type) {
-    case 'ADD_CAT':
+    case 'LOADING_CATS':
+      return { ...state,cats: [...state.cats, action.cat] }
+    case 'FETCH_CATS':
       return { ...state,cats: [...state.cats, action.cat] }
     default:
       return state;
