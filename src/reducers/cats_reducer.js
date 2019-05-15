@@ -4,9 +4,9 @@ export default function manageCat(state = {
 }, action) {
   switch (action.type) {
     case 'LOADING_CATS':
-      return { ...state,cats: [...state.cats, action.cat] }
+      return "Balls"
     case 'FETCH_CATS':
-      return { ...state,cats: [...state.cats, action.cat] }
+      return "Balls"
     default:
       return state;
   }
