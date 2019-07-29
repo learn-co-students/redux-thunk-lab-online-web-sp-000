@@ -1,0 +1,44 @@
+1) Allow users to search for, comment on, and follow their favorite shows
+2) Props passing hell/keeping state organized with the store
+3) <Some user input/click, etc.> ---> Action ---> Reducer --> Update state
+4) See below. Not sure where watchlist fits in or what kind it is.
+5) See below. Is about okay?
+6) Prevents an action being fired before our fetch has returned a promise (and its associated data that we want)
+
+
+Show }--------{ Watchlist?
+  |                |
+
+Comment
+
+              App (Container)
+  SearchInput       ShowContainer (Container)
+                      Shows (Stateless)
+                        Show/CommentContainer (Stateless)
+                          CommentInput
+                            Comment (Stateless)
+
+
+
+
+
+
+Routes:
+home/root - '/'
+watchlist - '/watchlist'
+about - '/about'
+
+View 1:
+Search box w show cards
+cards have button to follow?
+
+View 2:
+List of shows with past 5 eps
+Can mark as watched - remove from DOM
+
+View 3:
+About this site/me?
+
+Skateboard:
+
+Stretch features:
