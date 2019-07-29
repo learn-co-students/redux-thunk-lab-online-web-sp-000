@@ -3,6 +3,10 @@ import {Navbar} from 'react-bootstrap'
 
 class App extends Component {
 
+  componentDidMount(){
+    fetchCats()
+  }
+
   render() {
     return (
       <div className="App">
