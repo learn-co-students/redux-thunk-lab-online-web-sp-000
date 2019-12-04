@@ -12,6 +12,12 @@ class App extends Component {
 
   render() {
     console.log("this.props.catPics", this.props.catPics)
+
+    //Display loading status while waiting for data
+    if (this.props.loading) {
+      return <div>Fetching ...</div>
+    }
+
     return (
       <div className='App'>
         <h1>CatBook</h1>
