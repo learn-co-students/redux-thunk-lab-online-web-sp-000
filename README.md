@@ -121,7 +121,7 @@ export default catsReducer;
 
 We also set up the initial state here. We can see that in the `'LOADING_CATS'`
 case, `state.loading` becomes `true`, while the rest of `state` is just copied
-to a new object. In the `'LOADING_CATS'` case, `state.loading` becomes `false`,
+to a new object. In the `'ADD_CATS'` case, `state.loading` becomes `false`,
 and `state.cats` is set to the `action.cats` payload (HINT: so we know we're
 expecting a payload object with a `cats` key).
 
