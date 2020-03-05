@@ -1,24 +1,38 @@
 import React, { Component } from 'react';
-import {Navbar} from 'react-bootstrap'
+import { connect } from 'react-redux';
+import { fetchCats } from './actions/catActions'
+import CatList from './CatList'
 
-class App extends Component {   
-  
+class App extends Component {
+
+  componentDidMount() {
+    this.props.fetchCats()
+  }
+
+  handleLoading = () => {
+    console.log(this.props.loading)
+    if(this.props.loading) {
+      return <div>Loading...</div>
+    } else {
+      return <CatList catPics={this.props.catPics} />
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <Navbar>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a href="#">CatBook</a>
-            </Navbar.Brand>
-          </Navbar.Header>
-        </Navbar>
+        <h1>CatBook</h1>
+        {this.handleLoading()}
       </div>
     );
   }
 }
 
+const mapDispatchToProps = state => {
+  return {
+    catPics: state.cats,
+    loading: state.loading
+  }
+}
 
-
-export default App
-
+export default connect(mapDispatchToProps, { fetchCats })(App)
