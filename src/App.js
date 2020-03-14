@@ -10,7 +10,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props.catPics)
+    //console.log(this.props.catPics)
     return (
       <div className="App">
         <h1>CatBook</h1>
