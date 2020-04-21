@@ -5,7 +5,6 @@ import CatList from './CatList'
 
 class App extends Component {   
   componentDidMount() {
-    console.log(this.state, "catpics")
     this.props.fetchCats()
   }
   
