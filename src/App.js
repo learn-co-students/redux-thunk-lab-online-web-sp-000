@@ -1,16 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { fetchCats } from "./actions/catActions";
+import { connect } from "react-redux";
+import CatList from "./CatList";
+class App extends Component {
+  componentDidMount() {
+    this.props.fetchCats();
+  }
 
-class App extends Component {   
-  
   render() {
     return (
       <div>
         <h1>CatBook</h1>
-        {/* add CatList component here */}
+        <CatList catPics={this.props.cats} />
       </div>
     );
   }
 }
+const mapStateToProps = state => {
+  return { cats: state.cats };
+};
 
-export default App
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchCats: () => dispatch(fetchCats())
+  };
+};
 
+export default connect(mapStateToProps, mapDispatchToProps)(App);
