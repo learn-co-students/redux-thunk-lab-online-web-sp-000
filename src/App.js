@@ -13,12 +13,20 @@ class App extends Component {
  
   render() {
     console.log(this.props.catPics) // log will fire every time App renders
-    return (
-      <div className="App">
+      if (this.props.loading === false ){
+      return (
+        <div className="App">
+          <h1>CatBook</h1>
+          <CatList catPics= {this.props.catPics}/>
+        </div>
+      );
+    } else { 
+      return (
+        <div className="App">
         <h1>CatBook</h1>
-        <CatList catPics= {this.props.catPics} loading={this.props.loading}/>
       </div>
-    );
+      );
+    }
   }
 }
  
