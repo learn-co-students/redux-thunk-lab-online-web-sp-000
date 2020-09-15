@@ -9,7 +9,7 @@ class CatList extends Component {
     return(
       <div>
           {console.log('2 - cats loaded', this.props.catPics)}
-          {this.props.catPics.map((element, index) => <img key={index} source={element.url} alt={element.id}></img>)}
+          {this.props.catPics.map((element, index) => <img key={index} src={element.url} id={element.id} alt={index}></img>)}
       </div>
     );
   } else {
