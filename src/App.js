@@ -12,6 +12,9 @@ class App extends Component {
  
   render() {
     console.log(this.props.catPics) // log will fire every time App renders
+    if (this.props.loading === false) {
+      alert('Cats are loading, yo.')
+    }
     return (
       <div className="App">
         <h1>CatBook</h1>
