@@ -26,7 +26,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    catPics: state.cats.images,
+    catPics: state.cats,
     loading: state.loading
   }
 
