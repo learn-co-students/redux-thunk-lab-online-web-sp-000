@@ -1,4 +1,4 @@
-# Async Redux Lab: Pictures of Cats
+# Async Redux Lab: Pictures of Cats //
 
 Who doesn't want to look at pictures of cats? Well, now you can look at up to 20
 pictures of cats with our new React + Redux app. All you have to do is...build
