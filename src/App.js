@@ -8,12 +8,20 @@ class App extends Component {
   componentWillMount() {
     this.props.fetchCats()
   }
+
+  handleLoading = () => {
+    if(this.props.loading) {
+      return <div>Loading</div>
+    } else {
+      return <CatList catPics={this.props.catPics} />
+    }
+  }
   
   render() {
     return (
       <div>
         <h1>CatBook</h1>
-        <CatList catPics={this.props.catPics} />
+        {this.handleLoading()}
       </div>
     );
   }
