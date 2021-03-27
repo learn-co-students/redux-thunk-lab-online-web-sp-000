@@ -11,12 +11,14 @@ class App extends Component {
   }
 
   render() {
-   //  console.log(this.props)
     return (
       <div>
         <h1>CatBook</h1>
         {/* add CatList component here */}
-        <CatList catPics={this.props} />
+        
+        { !this.props.catPics.loading ?  
+            <CatList catPics={this.props.catPics} /> : null 
+        }
       </div>
     );
   }
