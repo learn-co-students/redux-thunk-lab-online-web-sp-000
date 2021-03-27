@@ -10,14 +10,18 @@ class App extends Component {
      this.props.fetchCats();
   }
 
+  renderLoadingMessage = () => {
+     return <h4>Loading...</h4>
+  }
+
   render() {
     return (
       <div>
         <h1>CatBook</h1>
         {/* add CatList component here */}
         
-        { !this.props.catPics.loading ?  
-            <CatList catPics={this.props.catPics} /> : null 
+        { this.props.catPics.loading ?  
+            this.renderLoadingMessage() : <CatList catPics={this.props.catPics} /> 
         }
       </div>
     );
