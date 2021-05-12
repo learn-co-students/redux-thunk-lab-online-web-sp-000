@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // 5. import fetchCats 
 import { fetchCats } from './actions/catActions'
-import { CatList } from './CatList'
+import CatList from './CatList'
 
 
 class App extends Component { 
@@ -13,6 +13,17 @@ class App extends Component {
     console.log(this.props)
     this.props.fetchCats()
   }
+
+  //5. loading 
+  handleLoading = () => {
+    console.log(this.props.loading)
+    if(this.props.loading) {
+      return <div>Loading...</div>
+    } else {
+      return <CatList catPics={this.props.catPics} />
+      }
+    }
+  
   
   render() {
     //show an empty array in console 
@@ -21,7 +32,7 @@ class App extends Component {
       <div className = "App">
         <h1>CatBook</h1>
         {/* add CatList component here */}
-        < CatList />
+       {this.handleLoading()}
       </div>
     );
   }
